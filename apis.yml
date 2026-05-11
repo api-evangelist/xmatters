@@ -1,0 +1,72 @@
+aid: xmatters
+name: xMatters
+description: >-
+  xMatters is a service reliability platform that orchestrates intelligent
+  communication, on-call management, and incident response workflows for IT
+  operations, DevOps, and major incident teams. The platform routes signals
+  from monitoring tools to the right people via multiple channels (voice, SMS,
+  push, email, chat) and triggers automated remediation workflows via its
+  integration builder and Flow Designer. The xMatters REST API provides full
+  programmatic control over people, groups, on-call schedules, events,
+  scenarios, and integrations using Basic auth, API keys, or OAuth 2.0.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Incident Management
+  - On-Call
+  - Alerting
+  - Service Reliability
+  - DevOps
+  - Communication
+  - Workflow Automation
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/xmatters/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: xmatters:rest-api
+    name: xMatters REST API
+    description: >-
+      REST API for managing people, groups, devices, on-call schedules, events,
+      conferences, scenarios, sites, and integrations in xMatters. The base URL
+      identifies the customer instance and uses the path /api/xm/1/.
+      Authentication supports Basic auth with username/password, API key
+      credentials, or OAuth 2.0 access tokens.
+    humanURL: https://help.xmatters.com/xmapi/
+    baseURL: https://{company}.xmatters.com/api/xm/1
+    tags:
+      - People
+      - Groups
+      - On-Call
+      - Events
+      - Scenarios
+      - Integrations
+    properties:
+      - type: Documentation
+        url: https://help.xmatters.com/xmapi/
+      - type: API Introduction
+        url: https://help.xmatters.com/ondemand/api/intro-xmatters-apis.htm
+      - type: OAuth Authentication
+        url: https://help.xmatters.com/ondemand/api/oauth.htm
+      - type: API Keys
+        url: https://help.xmatters.com/ondemand/user/apikeys.htm
+
+common:
+  - type: Website
+    url: https://www.xmatters.com
+  - type: Documentation
+    url: https://help.xmatters.com/ondemand/
+  - type: API Documentation
+    url: https://help.xmatters.com/xmapi/
+  - type: Pricing
+    url: https://www.xmatters.com/pricing
+  - type: Sign Up
+    url: https://www.xmatters.com/signup-free-trial
+  - type: Support
+    url: https://support.xmatters.com/
+  - type: Terraform Provider
+    url: https://registry.terraform.io/providers/xmatters/xmatters/latest/docs
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
