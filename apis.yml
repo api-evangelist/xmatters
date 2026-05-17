@@ -61,7 +61,7 @@ common:
     url: https://help.xmatters.com/xmapi/
   - type: Pricing
     url: https://www.xmatters.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://www.xmatters.com/signup-free-trial
   - type: Support
     url: https://support.xmatters.com/
