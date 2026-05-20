@@ -53,6 +53,10 @@ apis:
         url: https://help.xmatters.com/ondemand/user/apikeys.htm
 
 common:
+  - type: GitHubOrganization
+    url: https://github.com/xmatters
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/xmatters-inc
   - type: Website
     url: https://www.xmatters.com
   - type: Documentation
