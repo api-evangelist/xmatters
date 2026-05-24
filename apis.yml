@@ -71,6 +71,8 @@ common:
     url: https://support.xmatters.com/
   - type: Terraform Provider
     url: https://registry.terraform.io/providers/xmatters/xmatters/latest/docs
+  - type: LLMsTxt
+    url: https://xmatters.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
