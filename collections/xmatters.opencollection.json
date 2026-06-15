@@ -1,0 +1,612 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Events",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve a list of events",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events"
+          },
+          "docs": "Retrieve a list of events"
+        },
+        {
+          "info": {
+            "name": "Trigger a new event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events"
+          },
+          "docs": "Trigger a new event"
+        },
+        {
+          "info": {
+            "name": "Retrieve a specific event",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events/:eventId",
+            "params": [
+              {
+                "name": "eventId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve a specific event"
+        },
+        {
+          "info": {
+            "name": "Change the status of an event",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events/:eventId",
+            "params": [
+              {
+                "name": "eventId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Change the status of an event"
+        },
+        {
+          "info": {
+            "name": "Retrieve annotations on an event",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events/:eventId/annotations",
+            "params": [
+              {
+                "name": "eventId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve annotations on an event"
+        },
+        {
+          "info": {
+            "name": "Add a comment to an event",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/events/:eventId/annotations",
+            "params": [
+              {
+                "name": "eventId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a comment to an event"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "People",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List people",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people"
+          },
+          "docs": "List people"
+        },
+        {
+          "info": {
+            "name": "Create a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people"
+          },
+          "docs": "Create a person"
+        },
+        {
+          "info": {
+            "name": "Get a specific person",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific person"
+        },
+        {
+          "info": {
+            "name": "Modify a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify a person"
+        },
+        {
+          "info": {
+            "name": "Delete a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a person"
+        },
+        {
+          "info": {
+            "name": "List a person's devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId/devices",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List a person's devices"
+        },
+        {
+          "info": {
+            "name": "List a person's group memberships",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId/groups",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List a person's group memberships"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Groups",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List groups",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups"
+          },
+          "docs": "List groups"
+        },
+        {
+          "info": {
+            "name": "Create a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups"
+          },
+          "docs": "Create a group"
+        },
+        {
+          "info": {
+            "name": "Get a specific group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific group"
+        },
+        {
+          "info": {
+            "name": "Modify a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify a group"
+        },
+        {
+          "info": {
+            "name": "Delete a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups/:groupId",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a group"
+        },
+        {
+          "info": {
+            "name": "List group members",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups/:groupId/members",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List group members"
+        },
+        {
+          "info": {
+            "name": "Add a member to a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/groups/:groupId/members",
+            "params": [
+              {
+                "name": "groupId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Add a member to a group"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices"
+          },
+          "docs": "List all devices"
+        },
+        {
+          "info": {
+            "name": "Create a device",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices"
+          },
+          "docs": "Create a device"
+        },
+        {
+          "info": {
+            "name": "Get a specific device",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices/:deviceId",
+            "params": [
+              {
+                "name": "deviceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific device"
+        },
+        {
+          "info": {
+            "name": "Modify a device",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices/:deviceId",
+            "params": [
+              {
+                "name": "deviceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify a device"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Plans",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List communication plans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/plans"
+          },
+          "docs": "List communication plans"
+        },
+        {
+          "info": {
+            "name": "Create a communication plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/plans"
+          },
+          "docs": "Create a communication plan"
+        },
+        {
+          "info": {
+            "name": "Get a specific plan",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/plans/:planId",
+            "params": [
+              {
+                "name": "planId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific plan"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scenarios",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List scenarios",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/scenarios"
+          },
+          "docs": "List scenarios"
+        },
+        {
+          "info": {
+            "name": "Create a scenario",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/scenarios"
+          },
+          "docs": "Create a scenario"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Integrations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List integrations",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/integrations"
+          },
+          "docs": "List integrations"
+        },
+        {
+          "info": {
+            "name": "Create an integration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/integrations"
+          },
+          "docs": "Create an integration"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "OnCall",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Determine who is currently on-call",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/on-call"
+          },
+          "docs": "Determine who is currently on-call"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Services",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List services",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/services"
+          },
+          "docs": "List services"
+        },
+        {
+          "info": {
+            "name": "Create a service",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/services"
+          },
+          "docs": "Create a service"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Shifts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List shifts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/shifts"
+          },
+          "docs": "List shifts"
+        },
+        {
+          "info": {
+            "name": "Create a shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/shifts"
+          },
+          "docs": "Create a shift"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
