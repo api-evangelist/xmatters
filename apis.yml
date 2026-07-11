@@ -53,6 +53,10 @@ apis:
         url: https://help.xmatters.com/ondemand/user/apikeys.htm
 
 common:
+  - type: TrustCenter
+    url: security/xmatters-trust-center.yml
+  - type: DomainSecurity
+    url: security/xmatters-domain-security.yml
   - type: Authentication
     url: authentication/xmatters-authentication.yml
   - type: OAuthScopes

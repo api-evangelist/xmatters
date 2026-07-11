@@ -1,0 +1,24 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/xmatters-openapi.yml
+summary:
+  types:
+  - http
+  - oauth2
+  oauth2_flows:
+  - password
+schemes:
+- name: BasicAuth
+  type: http
+  scheme: basic
+  description: HTTP Basic authentication using a username and password or API key.
+  sources:
+  - openapi/xmatters-openapi.yml
+- name: OAuth2
+  type: oauth2
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+    scopes: 0
+  sources:
+  - openapi/xmatters-openapi.yml
