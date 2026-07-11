@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/xmatters-openapi.yml
+docs: https://help.xmatters.com/ondemand/api/oauth.htm
+note: xMatters OAuth 2.0 (password and refresh_token grants) does not use scopes;
+  API access is governed by the authenticated user's roles and permissions
+  (https://help.xmatters.com/xmapi/).
+schemes:
+- name: OAuth2
+  source: openapi/xmatters-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+scopes: []
