@@ -53,6 +53,8 @@ apis:
         url: https://help.xmatters.com/ondemand/user/apikeys.htm
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/xmatters-agentic-access.yml
   - type: TrustCenter
     url: security/xmatters-trust-center.yml
   - type: DomainSecurity
