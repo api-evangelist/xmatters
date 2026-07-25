@@ -1,0 +1,133 @@
+openapi: 3.1.0
+info:
+  title: xMatters REST Devices Groups API
+  version: '1.0'
+  description: 'The xMatters REST API provides programmatic access to people, groups, on-call
+
+    schedules, events, scenarios, and integrations on the xMatters service
+
+    reliability platform. Endpoints derived from the public xMatters REST API
+
+    documentation at help.xmatters.com/xmapi/.
+
+    '
+  contact:
+    name: xMatters Documentation
+    url: https://help.xmatters.com/xmapi/
+servers:
+- url: https://{company}.{deployment}.xmatters.com/api/xm/1
+  description: xMatters tenant deployment
+  variables:
+    company:
+      default: acme
+      description: The customer's xMatters subdomain
+    deployment:
+      default: hosted
+      description: Deployment cluster identifier
+security:
+- BasicAuth: []
+- OAuth2: []
+tags:
+- name: Groups
+paths:
+  /groups:
+    get:
+      tags:
+      - Groups
+      summary: List groups
+      operationId: listGroups
+      responses:
+        '200':
+          description: A list of groups
+    post:
+      tags:
+      - Groups
+      summary: Create a group
+      operationId: createGroup
+      responses:
+        '201':
+          description: Group created
+  /groups/{groupId}:
+    get:
+      tags:
+      - Groups
+      summary: Get a specific group
+      operationId: getGroup
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A group
+    put:
+      tags:
+      - Groups
+      summary: Modify a group
+      operationId: updateGroup
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated group
+    delete:
+      tags:
+      - Groups
+      summary: Delete a group
+      operationId: deleteGroup
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '204':
+          description: Deleted
+  /groups/{groupId}/members:
+    get:
+      tags:
+      - Groups
+      summary: List group members
+      operationId: listGroupMembers
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Members
+    post:
+      tags:
+      - Groups
+      summary: Add a member to a group
+      operationId: addGroupMember
+      parameters:
+      - name: groupId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Member added
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication using a username and password or API key.
+    OAuth2:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+          scopes: {}

@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: xMatters REST Devices Scenarios API
+  version: '1.0'
+  description: 'The xMatters REST API provides programmatic access to people, groups, on-call
+
+    schedules, events, scenarios, and integrations on the xMatters service
+
+    reliability platform. Endpoints derived from the public xMatters REST API
+
+    documentation at help.xmatters.com/xmapi/.
+
+    '
+  contact:
+    name: xMatters Documentation
+    url: https://help.xmatters.com/xmapi/
+servers:
+- url: https://{company}.{deployment}.xmatters.com/api/xm/1
+  description: xMatters tenant deployment
+  variables:
+    company:
+      default: acme
+      description: The customer's xMatters subdomain
+    deployment:
+      default: hosted
+      description: Deployment cluster identifier
+security:
+- BasicAuth: []
+- OAuth2: []
+tags:
+- name: Scenarios
+paths:
+  /scenarios:
+    get:
+      tags:
+      - Scenarios
+      summary: List scenarios
+      operationId: listScenarios
+      responses:
+        '200':
+          description: Scenarios
+    post:
+      tags:
+      - Scenarios
+      summary: Create a scenario
+      operationId: createScenario
+      responses:
+        '201':
+          description: Scenario created
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication using a username and password or API key.
+    OAuth2:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+          scopes: {}

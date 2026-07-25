@@ -1,0 +1,90 @@
+openapi: 3.1.0
+info:
+  title: xMatters REST Devices API
+  version: '1.0'
+  description: 'The xMatters REST API provides programmatic access to people, groups, on-call
+
+    schedules, events, scenarios, and integrations on the xMatters service
+
+    reliability platform. Endpoints derived from the public xMatters REST API
+
+    documentation at help.xmatters.com/xmapi/.
+
+    '
+  contact:
+    name: xMatters Documentation
+    url: https://help.xmatters.com/xmapi/
+servers:
+- url: https://{company}.{deployment}.xmatters.com/api/xm/1
+  description: xMatters tenant deployment
+  variables:
+    company:
+      default: acme
+      description: The customer's xMatters subdomain
+    deployment:
+      default: hosted
+      description: Deployment cluster identifier
+security:
+- BasicAuth: []
+- OAuth2: []
+tags:
+- name: Devices
+paths:
+  /devices:
+    get:
+      tags:
+      - Devices
+      summary: List all devices
+      operationId: listDevices
+      responses:
+        '200':
+          description: Devices
+    post:
+      tags:
+      - Devices
+      summary: Create a device
+      operationId: createDevice
+      responses:
+        '201':
+          description: Device created
+  /devices/{deviceId}:
+    get:
+      tags:
+      - Devices
+      summary: Get a specific device
+      operationId: getDevice
+      parameters:
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A device
+    put:
+      tags:
+      - Devices
+      summary: Modify a device
+      operationId: updateDevice
+      parameters:
+      - name: deviceId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Updated device
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication using a username and password or API key.
+    OAuth2:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+          scopes: {}
