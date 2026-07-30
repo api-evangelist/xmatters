@@ -10,7 +10,19 @@ description: >-
   programmatic control over people, groups, on-call schedules, events,
   scenarios, and integrations using Basic auth, API keys, or OAuth 2.0.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/xmatters.png
 tags:
   - Incident Management
   - On-Call
@@ -25,33 +37,131 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: xmatters:rest-api
-    name: xMatters REST API
-    description: >-
-      REST API for managing people, groups, devices, on-call schedules, events,
-      conferences, scenarios, sites, and integrations in xMatters. The base URL
-      identifies the customer instance and uses the path /api/xm/1/.
-      Authentication supports Basic auth with username/password, API key
-      credentials, or OAuth 2.0 access tokens.
-    humanURL: https://help.xmatters.com/xmapi/
-    baseURL: https://{company}.xmatters.com/api/xm/1
-    tags:
-      - People
-      - Groups
-      - On-Call
-      - Events
-      - Scenarios
-      - Integrations
-    properties:
-      - type: Documentation
-        url: https://help.xmatters.com/xmapi/
-      - type: API Introduction
-        url: https://help.xmatters.com/ondemand/api/intro-xmatters-apis.htm
-      - type: OAuth Authentication
-        url: https://help.xmatters.com/ondemand/api/oauth.htm
-      - type: API Keys
-        url: https://help.xmatters.com/ondemand/user/apikeys.htm
-
+- aid: xmatters:rest-api
+  name: xMatters REST API
+  description: >-
+    REST API for managing people, groups, devices, on-call schedules, events, conferences, scenarios,
+    sites, and integrations in xMatters. The base URL identifies the customer instance and uses the path
+    /api/xm/1/. Authentication supports Basic auth with username/password, API key credentials, or OAuth
+    2.0 access tokens.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - People
+  - Groups
+  - On-Call
+  - Events
+  - Scenarios
+  - Integrations
+  properties:
+  - type: Documentation
+    url: https://help.xmatters.com/xmapi/
+  - type: API Introduction
+    url: https://help.xmatters.com/ondemand/api/intro-xmatters-apis.htm
+  - type: OAuth Authentication
+    url: https://help.xmatters.com/ondemand/api/oauth.htm
+  - type: API Keys
+    url: https://help.xmatters.com/ondemand/user/apikeys.htm
+- aid: xmatters:xmatters-devices-api
+  name: xMatters Devices API
+  description: The Devices API from xMatters — 2 operation(s) for devices.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Devices
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-devices-api-openapi.yml
+- aid: xmatters:xmatters-events-api
+  name: xMatters Events API
+  description: The Events API from xMatters — 3 operation(s) for events.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-events-api-openapi.yml
+- aid: xmatters:xmatters-groups-api
+  name: xMatters Groups API
+  description: The Groups API from xMatters — 3 operation(s) for groups.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-groups-api-openapi.yml
+- aid: xmatters:xmatters-integrations-api
+  name: xMatters Integrations API
+  description: The Integrations API from xMatters — 1 operation(s) for integrations.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-integrations-api-openapi.yml
+- aid: xmatters:xmatters-oncall-api
+  name: xMatters OnCall API
+  description: The OnCall API from xMatters — 1 operation(s) for oncall.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - OnCall
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-oncall-api-openapi.yml
+- aid: xmatters:xmatters-people-api
+  name: xMatters People API
+  description: The People API from xMatters — 4 operation(s) for people.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - People
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-people-api-openapi.yml
+- aid: xmatters:xmatters-plans-api
+  name: xMatters Plans API
+  description: The Plans API from xMatters — 2 operation(s) for plans.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-plans-api-openapi.yml
+- aid: xmatters:xmatters-scenarios-api
+  name: xMatters Scenarios API
+  description: The Scenarios API from xMatters — 1 operation(s) for scenarios.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Scenarios
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-scenarios-api-openapi.yml
+- aid: xmatters:xmatters-services-api
+  name: xMatters Services API
+  description: The Services API from xMatters — 1 operation(s) for services.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Services
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-services-api-openapi.yml
+- aid: xmatters:xmatters-shifts-api
+  name: xMatters Shifts API
+  description: The Shifts API from xMatters — 1 operation(s) for shifts.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - Shifts
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-shifts-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/xmatters-agentic-access.yml
