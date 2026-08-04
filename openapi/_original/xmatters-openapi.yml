@@ -1,0 +1,422 @@
+openapi: 3.1.0
+info:
+  title: xMatters REST API
+  version: "1.0"
+  description: |
+    The xMatters REST API provides programmatic access to people, groups, on-call
+    schedules, events, scenarios, and integrations on the xMatters service
+    reliability platform. Endpoints derived from the public xMatters REST API
+    documentation at help.xmatters.com/xmapi/.
+  contact:
+    name: xMatters Documentation
+    url: https://help.xmatters.com/xmapi/
+servers:
+  - url: https://{company}.{deployment}.xmatters.com/api/xm/1
+    description: xMatters tenant deployment
+    variables:
+      company:
+        default: acme
+        description: The customer's xMatters subdomain
+      deployment:
+        default: hosted
+        description: Deployment cluster identifier
+security:
+  - BasicAuth: []
+  - OAuth2: []
+tags:
+  - name: Events
+  - name: People
+  - name: Groups
+  - name: Devices
+  - name: Plans
+  - name: Scenarios
+  - name: Integrations
+  - name: OnCall
+  - name: Services
+  - name: Shifts
+paths:
+  /events:
+    get:
+      tags: [Events]
+      summary: Retrieve a list of events
+      operationId: listEvents
+      responses:
+        '200':
+          description: A list of events
+    post:
+      tags: [Events]
+      summary: Trigger a new event
+      operationId: createEvent
+      responses:
+        '201':
+          description: Event created
+  /events/{eventId}:
+    get:
+      tags: [Events]
+      summary: Retrieve a specific event
+      operationId: getEvent
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: An event
+    put:
+      tags: [Events]
+      summary: Change the status of an event
+      operationId: updateEvent
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated event
+  /events/{eventId}/annotations:
+    get:
+      tags: [Events]
+      summary: Retrieve annotations on an event
+      operationId: listEventAnnotations
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Annotations
+    post:
+      tags: [Events]
+      summary: Add a comment to an event
+      operationId: createEventAnnotation
+      parameters:
+        - name: eventId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Annotation created
+  /people:
+    get:
+      tags: [People]
+      summary: List people
+      operationId: listPeople
+      responses:
+        '200':
+          description: A list of people
+    post:
+      tags: [People]
+      summary: Create a person
+      operationId: createPerson
+      responses:
+        '201':
+          description: Person created
+  /people/{personId}:
+    get:
+      tags: [People]
+      summary: Get a specific person
+      operationId: getPerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A person
+    put:
+      tags: [People]
+      summary: Modify a person
+      operationId: updatePerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated person
+    delete:
+      tags: [People]
+      summary: Delete a person
+      operationId: deletePerson
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deleted
+  /people/{personId}/devices:
+    get:
+      tags: [People]
+      summary: List a person's devices
+      operationId: listPersonDevices
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Devices
+  /people/{personId}/groups:
+    get:
+      tags: [People]
+      summary: List a person's group memberships
+      operationId: listPersonGroups
+      parameters:
+        - name: personId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Groups
+  /groups:
+    get:
+      tags: [Groups]
+      summary: List groups
+      operationId: listGroups
+      responses:
+        '200':
+          description: A list of groups
+    post:
+      tags: [Groups]
+      summary: Create a group
+      operationId: createGroup
+      responses:
+        '201':
+          description: Group created
+  /groups/{groupId}:
+    get:
+      tags: [Groups]
+      summary: Get a specific group
+      operationId: getGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A group
+    put:
+      tags: [Groups]
+      summary: Modify a group
+      operationId: updateGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated group
+    delete:
+      tags: [Groups]
+      summary: Delete a group
+      operationId: deleteGroup
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Deleted
+  /groups/{groupId}/members:
+    get:
+      tags: [Groups]
+      summary: List group members
+      operationId: listGroupMembers
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Members
+    post:
+      tags: [Groups]
+      summary: Add a member to a group
+      operationId: addGroupMember
+      parameters:
+        - name: groupId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: Member added
+  /devices:
+    get:
+      tags: [Devices]
+      summary: List all devices
+      operationId: listDevices
+      responses:
+        '200':
+          description: Devices
+    post:
+      tags: [Devices]
+      summary: Create a device
+      operationId: createDevice
+      responses:
+        '201':
+          description: Device created
+  /devices/{deviceId}:
+    get:
+      tags: [Devices]
+      summary: Get a specific device
+      operationId: getDevice
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A device
+    put:
+      tags: [Devices]
+      summary: Modify a device
+      operationId: updateDevice
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Updated device
+  /plans:
+    get:
+      tags: [Plans]
+      summary: List communication plans
+      operationId: listPlans
+      responses:
+        '200':
+          description: Plans
+    post:
+      tags: [Plans]
+      summary: Create a communication plan
+      operationId: createPlan
+      responses:
+        '201':
+          description: Plan created
+  /plans/{planId}:
+    get:
+      tags: [Plans]
+      summary: Get a specific plan
+      operationId: getPlan
+      parameters:
+        - name: planId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A plan
+  /scenarios:
+    get:
+      tags: [Scenarios]
+      summary: List scenarios
+      operationId: listScenarios
+      responses:
+        '200':
+          description: Scenarios
+    post:
+      tags: [Scenarios]
+      summary: Create a scenario
+      operationId: createScenario
+      responses:
+        '201':
+          description: Scenario created
+  /integrations:
+    get:
+      tags: [Integrations]
+      summary: List integrations
+      operationId: listIntegrations
+      responses:
+        '200':
+          description: Integrations
+    post:
+      tags: [Integrations]
+      summary: Create an integration
+      operationId: createIntegration
+      responses:
+        '201':
+          description: Integration created
+  /on-call:
+    get:
+      tags: [OnCall]
+      summary: Determine who is currently on-call
+      operationId: getOnCall
+      responses:
+        '200':
+          description: On-call information
+  /services:
+    get:
+      tags: [Services]
+      summary: List services
+      operationId: listServices
+      responses:
+        '200':
+          description: Services
+    post:
+      tags: [Services]
+      summary: Create a service
+      operationId: createService
+      responses:
+        '201':
+          description: Service created
+  /shifts:
+    get:
+      tags: [Shifts]
+      summary: List shifts
+      operationId: listShifts
+      responses:
+        '200':
+          description: Shifts
+    post:
+      tags: [Shifts]
+      summary: Create a shift
+      operationId: createShift
+      responses:
+        '201':
+          description: Shift created
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+      description: HTTP Basic authentication using a username and password or API key.
+    OAuth2:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+          scopes: {}

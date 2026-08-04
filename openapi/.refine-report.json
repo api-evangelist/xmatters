@@ -1,0 +1,32 @@
+{
+  "provider": "xmatters",
+  "sources": [
+    "xmatters-devices-api-openapi.yml",
+    "xmatters-events-api-openapi.yml",
+    "xmatters-groups-api-openapi.yml",
+    "xmatters-integrations-api-openapi.yml",
+    "xmatters-oncall-api-openapi.yml",
+    "xmatters-people-api-openapi.yml",
+    "xmatters-plans-api-openapi.yml",
+    "xmatters-scenarios-api-openapi.yml",
+    "xmatters-services-api-openapi.yml",
+    "xmatters-shifts-api-openapi.yml"
+  ],
+  "outputs": [
+    "xmatters-devices-api-openapi.yml",
+    "xmatters-events-api-openapi.yml",
+    "xmatters-groups-api-openapi.yml",
+    "xmatters-integrations-api-openapi.yml",
+    "xmatters-oncall-api-openapi.yml",
+    "xmatters-people-api-openapi.yml",
+    "xmatters-plans-api-openapi.yml",
+    "xmatters-scenarios-api-openapi.yml",
+    "xmatters-services-api-openapi.yml",
+    "xmatters-shifts-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
