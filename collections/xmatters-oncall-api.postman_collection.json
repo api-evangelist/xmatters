@@ -1,0 +1,154 @@
+{
+  "item": [
+    {
+      "id": "2e886f54-8ff3-472d-b761-566a30c4429c",
+      "name": "OnCall",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ce17d68-4052-42b2-a1e6-c3fec02cdd87",
+          "name": "Determine who is currently on-call",
+          "request": {
+            "name": "Determine who is currently on-call",
+            "description": {},
+            "url": {
+              "path": [
+                "on-call"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ea15509d-8737-43b3-ae49-c7973c44369c",
+              "name": "On-call information",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "on-call"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The customer's xMatters subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "acme",
+      "key": "company"
+    },
+    {
+      "description": {
+        "content": "Deployment cluster identifier",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "hosted",
+      "key": "deployment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{company}}.{{deployment}}.xmatters.com/api/xm/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5c7c9308-ef44-4ca4-b16b-eec3f27404f8",
+    "name": "xMatters REST Devices OnCall API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The xMatters REST API provides programmatic access to people, groups, on-call\nschedules, events, scenarios, and integrations on the xMatters service\nreliability platform. Endpoints derived from the public xMatters REST API\ndocumentation at help.xmatters.com/xmapi/.\n\n\nContact Support:\n Name: xMatters Documentation",
+      "type": "text/plain"
+    }
+  }
+}

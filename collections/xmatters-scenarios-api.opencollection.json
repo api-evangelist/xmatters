@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST Devices Scenarios API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scenarios",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List scenarios",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/scenarios"
+          },
+          "docs": "List scenarios"
+        },
+        {
+          "info": {
+            "name": "Create a scenario",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/scenarios"
+          },
+          "docs": "Create a scenario"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

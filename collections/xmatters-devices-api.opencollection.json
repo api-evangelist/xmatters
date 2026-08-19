@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST Devices API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices"
+          },
+          "docs": "List all devices"
+        },
+        {
+          "info": {
+            "name": "Create a device",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices"
+          },
+          "docs": "Create a device"
+        },
+        {
+          "info": {
+            "name": "Get a specific device",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices/:deviceId",
+            "params": [
+              {
+                "name": "deviceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific device"
+        },
+        {
+          "info": {
+            "name": "Modify a device",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/devices/:deviceId",
+            "params": [
+              {
+                "name": "deviceId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify a device"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

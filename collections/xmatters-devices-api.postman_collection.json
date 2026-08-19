@@ -1,0 +1,459 @@
+{
+  "item": [
+    {
+      "id": "20cb2eec-6f82-4066-9623-a47ddda13edf",
+      "name": "Devices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fd340551-fe49-4bbe-ad5b-68e04987cbfd",
+          "name": "List all devices",
+          "request": {
+            "name": "List all devices",
+            "description": {},
+            "url": {
+              "path": [
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c8d485f1-0851-4e29-8de9-b4f3b3c64974",
+              "name": "Devices",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2032d561-10a7-46db-ab67-8ce4842c2d85",
+          "name": "Create a device",
+          "request": {
+            "name": "Create a device",
+            "description": {},
+            "url": {
+              "path": [
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d490b5cc-f6e9-460e-a472-cd088bb63a69",
+              "name": "Device created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a68fad8d-36a7-4330-aafd-8020a915ac7d",
+          "name": "Get a specific device",
+          "request": {
+            "name": "Get a specific device",
+            "description": {},
+            "url": {
+              "path": [
+                "devices",
+                ":deviceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3bd5d31e-72dd-44f6-8249-29f030932ed5",
+              "name": "A device",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices",
+                    ":deviceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d65fe211-714c-4cec-ad47-7f60c8eef980",
+          "name": "Modify a device",
+          "request": {
+            "name": "Modify a device",
+            "description": {},
+            "url": {
+              "path": [
+                "devices",
+                ":deviceId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "173c84ff-32e8-46d5-9672-3a0602a5dc5c",
+              "name": "Updated device",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices",
+                    ":deviceId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The customer's xMatters subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "acme",
+      "key": "company"
+    },
+    {
+      "description": {
+        "content": "Deployment cluster identifier",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "hosted",
+      "key": "deployment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{company}}.{{deployment}}.xmatters.com/api/xm/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5f21a5bf-9d95-482a-9625-02fea5462219",
+    "name": "xMatters REST Devices API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The xMatters REST API provides programmatic access to people, groups, on-call\nschedules, events, scenarios, and integrations on the xMatters service\nreliability platform. Endpoints derived from the public xMatters REST API\ndocumentation at help.xmatters.com/xmapi/.\n\n\nContact Support:\n Name: xMatters Documentation",
+      "type": "text/plain"
+    }
+  }
+}

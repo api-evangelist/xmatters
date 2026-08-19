@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST Devices People API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "People",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List people",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people"
+          },
+          "docs": "List people"
+        },
+        {
+          "info": {
+            "name": "Create a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people"
+          },
+          "docs": "Create a person"
+        },
+        {
+          "info": {
+            "name": "Get a specific person",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a specific person"
+        },
+        {
+          "info": {
+            "name": "Modify a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Modify a person"
+        },
+        {
+          "info": {
+            "name": "Delete a person",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete a person"
+        },
+        {
+          "info": {
+            "name": "List a person's devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId/devices",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List a person's devices"
+        },
+        {
+          "info": {
+            "name": "List a person's group memberships",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/people/:personId/groups",
+            "params": [
+              {
+                "name": "personId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List a person's group memberships"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

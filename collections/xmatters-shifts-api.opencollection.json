@@ -1,0 +1,47 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST Devices Shifts API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Shifts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List shifts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/shifts"
+          },
+          "docs": "List shifts"
+        },
+        {
+          "info": {
+            "name": "Create a shift",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/shifts"
+          },
+          "docs": "Create a shift"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

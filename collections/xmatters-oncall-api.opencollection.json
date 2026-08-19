@@ -1,0 +1,36 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "xMatters REST Devices OnCall API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "basic",
+      "username": "{{username}}",
+      "password": "{{password}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "OnCall",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Determine who is currently on-call",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://{company}.{deployment}.xmatters.com/api/xm/1/on-call"
+          },
+          "docs": "Determine who is currently on-call"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

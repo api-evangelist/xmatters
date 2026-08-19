@@ -1,0 +1,245 @@
+{
+  "item": [
+    {
+      "id": "b994dd84-dc80-42f5-b3ad-1279a5dd894b",
+      "name": "Shifts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "64b02fb1-35f7-4921-af85-bc6b46f8b36d",
+          "name": "List shifts",
+          "request": {
+            "name": "List shifts",
+            "description": {},
+            "url": {
+              "path": [
+                "shifts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f7b2bc31-7fd9-41f7-9b28-a20403c72859",
+              "name": "Shifts",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "shifts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a448fd8f-d2ec-4c35-b386-569eaac5c451",
+          "name": "Create a shift",
+          "request": {
+            "name": "Create a shift",
+            "description": {},
+            "url": {
+              "path": [
+                "shifts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dbc64a54-04fe-42ab-8b76-fe45e0a2801a",
+              "name": "Shift created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "shifts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The customer's xMatters subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "acme",
+      "key": "company"
+    },
+    {
+      "description": {
+        "content": "Deployment cluster identifier",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "hosted",
+      "key": "deployment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{company}}.{{deployment}}.xmatters.com/api/xm/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "09abf9c2-4233-43e4-a7bf-4e287bd6a66a",
+    "name": "xMatters REST Devices Shifts API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The xMatters REST API provides programmatic access to people, groups, on-call\nschedules, events, scenarios, and integrations on the xMatters service\nreliability platform. Endpoints derived from the public xMatters REST API\ndocumentation at help.xmatters.com/xmapi/.\n\n\nContact Support:\n Name: xMatters Documentation",
+      "type": "text/plain"
+    }
+  }
+}

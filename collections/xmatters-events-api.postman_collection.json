@@ -1,0 +1,677 @@
+{
+  "item": [
+    {
+      "id": "81f67e99-1f7c-4f24-a76b-3a32976c9e25",
+      "name": "Events",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b7895a6e-3d37-4bb9-95c5-e11bff3d23a6",
+          "name": "Retrieve a list of events",
+          "request": {
+            "name": "Retrieve a list of events",
+            "description": {},
+            "url": {
+              "path": [
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5ddf9849-9782-4d1a-9347-8e419044f0e3",
+              "name": "A list of events",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ee0e2d8b-d445-4dbc-9952-c6ee357bf9d7",
+          "name": "Trigger a new event",
+          "request": {
+            "name": "Trigger a new event",
+            "description": {},
+            "url": {
+              "path": [
+                "events"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3d4251d3-0af5-401c-b201-33a733b9e0ea",
+              "name": "Event created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "93b68bb5-b694-4844-a3a0-843b5a64aec6",
+          "name": "Retrieve a specific event",
+          "request": {
+            "name": "Retrieve a specific event",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":eventId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "eventId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3ce428ef-79c7-4866-aef7-1cdf09e7d8c6",
+              "name": "An event",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":eventId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "eventId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ba21439d-838d-4ebf-b31b-630f0a8daa9c",
+          "name": "Change the status of an event",
+          "request": {
+            "name": "Change the status of an event",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":eventId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "eventId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "PUT",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4abca5a-be48-4ef1-a487-f4d31b87328e",
+              "name": "Updated event",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":eventId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "eventId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "37cd2c94-5e68-4966-80b1-7aba5d24bcb0",
+          "name": "Retrieve annotations on an event",
+          "request": {
+            "name": "Retrieve annotations on an event",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":eventId",
+                "annotations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "eventId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4d8a6f9b-e174-4916-b32c-ecdcf59bec42",
+              "name": "Annotations",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":eventId",
+                    "annotations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "eventId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c648b69-a2b5-4e4c-b50a-a64f51a800ec",
+          "name": "Add a comment to an event",
+          "request": {
+            "name": "Add a comment to an event",
+            "description": {},
+            "url": {
+              "path": [
+                "events",
+                ":eventId",
+                "annotations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "eventId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "The customer's xMatters subdomain",
+                  "type": "any",
+                  "value": "{{company}}",
+                  "key": "company"
+                },
+                {
+                  "description": "Deployment cluster identifier",
+                  "type": "any",
+                  "value": "{{deployment}}",
+                  "key": "deployment"
+                }
+              ]
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a2539862-d9b7-4b8a-ab3f-51465dc9b9ba",
+              "name": "Annotation created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "events",
+                    ":eventId",
+                    "annotations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "eventId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "The customer's xMatters subdomain",
+                      "type": "any",
+                      "value": "{{company}}",
+                      "key": "company"
+                    },
+                    {
+                      "description": "Deployment cluster identifier",
+                      "type": "any",
+                      "value": "{{deployment}}",
+                      "key": "deployment"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The customer's xMatters subdomain",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "acme",
+      "key": "company"
+    },
+    {
+      "description": {
+        "content": "Deployment cluster identifier",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "hosted",
+      "key": "deployment"
+    },
+    {
+      "type": "string",
+      "value": "https://{{company}}.{{deployment}}.xmatters.com/api/xm/1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{basicAuthUsername}}"
+      },
+      {
+        "key": "password",
+        "value": "{{basicAuthPassword}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e73c3eba-8640-4efd-a751-64b1fa91bef6",
+    "name": "xMatters REST Devices Events API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The xMatters REST API provides programmatic access to people, groups, on-call\nschedules, events, scenarios, and integrations on the xMatters service\nreliability platform. Endpoints derived from the public xMatters REST API\ndocumentation at help.xmatters.com/xmapi/.\n\n\nContact Support:\n Name: xMatters Documentation",
+      "type": "text/plain"
+    }
+  }
+}

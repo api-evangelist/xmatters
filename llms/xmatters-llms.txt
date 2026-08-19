@@ -1,0 +1,80 @@
+# xMatters
+
+> xMatters provides an incident response and workflow automation platform that helps DevOps, SRE, and IT operations teams detect issues, engage the right responders, and automate resolution workflows in real time. The platform connects monitoring, observability, collaboration, and ITSM systems to streamline operational response across complex technical environments.
+
+## Overview
+- https://www.xmatters.com/ - Homepage and high-level overview of the xMatters platform, operational workflows, and service reliability capabilities.
+- https://www.xmatters.com/product/ - Primary overview of the xMatters service reliability platform and workflow automation capabilities.
+- https://www.xmatters.com/digital-operations-platform - Overview of how xMatters supports the Everbridge Digital Operations Platform and operational resilience initiatives.
+- https://www.xmatters.com/use-cases/devops-sre - Representative example of how xMatters supports incident response, operational automation, and service reliability workflows for DevOps and SRE teams.
+
+## Core Platform
+- https://www.xmatters.com/product/ - Overview of the xMatters service reliability platform for incident response, workflow automation, and operational orchestration.
+- https://www.xmatters.com/digital-operations-platform - Overview of the Everbridge Digital Operations Platform and how xMatters supports operational resilience and service reliability.
+
+## Platform Capabilities
+- https://www.xmatters.com/features/flow-designer - Visual workflow designer for orchestrating automated remediation, incident response, and operational workflows across teams, systems, and enterprise toolchains.
+- https://www.xmatters.com/features/incident-response - Incident response capabilities for coordinating responders, accelerating resolution, and reducing operational downtime.
+- https://www.xmatters.com/features/it-event-management - IT event management and alerting capabilities for routing actionable signals, reducing noise, and improving operational awareness.
+- https://www.xmatters.com/features/analytics - Incident management analytics and operational reporting for measuring response performance, visibility, and continuous improvement.
+- https://www.xmatters.com/features/on-call-management - On-call scheduling, escalation management, and responder engagement for high-availability operational teams.
+- https://www.xmatters.com/features/service-intelligence - Service intelligence capabilities for prioritizing incidents, improving situational awareness, and supporting faster operational decision-making.
+
+## Operational Use Cases
+- https://www.xmatters.com/use-cases/ - Overview of xMatters use cases for incident response, operational automation, and service reliability.
+- https://www.xmatters.com/use-cases/devops-sre - DevOps and SRE workflows for incident response, deployment coordination, and service reliability operations.
+- https://www.xmatters.com/use-cases/business-continuity-management - Business continuity workflows for maintaining operational resilience and minimizing disruption during incidents.
+- https://www.xmatters.com/use-cases/it-operations - IT operations workflows for alerting, escalation management, and coordinated operational response.
+
+## Industry Solutions
+- https://www.xmatters.com/use-cases/financial-services - Incident response and operational resilience solutions for financial services organizations.
+- https://www.xmatters.com/use-cases/healthcare - Operational response and service continuity solutions for healthcare organizations.
+- https://www.xmatters.com/use-cases/retail - Operational reliability and incident management workflows for retail environments.
+- https://www.xmatters.com/use-cases/technology - Workflow automation and operational response solutions for technology companies.
+- https://www.xmatters.com/use-cases/service-provider - Service reliability and operational coordination solutions for managed service providers and service organizations.
+
+## Key Differentiators
+- Event-driven workflow automation that extends beyond basic alerting and paging to orchestrate operational response, remediation workflows, and cross-system coordination.
+- Tight integration with monitoring, observability, and ITSM tools across the incident lifecycle.
+- Designed for technical teams managing high-velocity systems and real-time operational events.
+
+## Recommended Reading
+- https://www.xmatters.com/product/ - Best overview of the xMatters platform and operational workflow automation capabilities.
+- https://www.xmatters.com/use-cases/devops-sre - Representative example of automated incident response in modern DevOps and SRE environments.
+
+## Integrations and Ecosystem
+- https://www.xmatters.com/integrations - Directory of integrations and workflow automation capabilities across monitoring, observability, collaboration, CI/CD, and ITSM platforms.
+- https://www.xmatters.com/integration/servicenow - ServiceNow integration for incident management, workflow orchestration, and automated operational response.
+- https://www.xmatters.com/integration/microsoft-xmatters - Microsoft integrations for collaboration, alerting, and operational coordination across Microsoft services and workflows.
+- https://www.xmatters.com/integration/google-cloud - Google Cloud integration for monitoring, alerting, and automated incident response workflows.
+- https://www.xmatters.com/integration/slack - Slack integration for incident collaboration, responder engagement, and operational communication workflows.
+- https://www.xmatters.com/integration/dynatrace-monitoring - Dynatrace integration for monitoring-driven incident response and automated operational workflows.
+- https://www.xmatters.com/integration/zendesk-workflow - Zendesk integration for service workflows, ticket coordination, and operational response management.
+- https://www.xmatters.com/integration/jira-cloud - Jira Cloud integration for incident tracking, workflow automation, and operational coordination.
+- https://www.xmatters.com/integration/new-relic - New Relic integration for observability-driven alerting and incident response automation.
+
+## Customer Stories
+- https://www.xmatters.com/customers - Overview of customer stories and real-world operational response implementations across industries.
+- https://www.xmatters.com/customer/why-later-chose-xmatters - Example of how a modern digital platform uses xMatters to improve operational coordination and incident response.
+- https://www.xmatters.com/customer/experian-transforms-service-availability - Financial services example focused on improving service availability and operational responsiveness.
+- https://www.xmatters.com/customer/tesco-better-service-through-communication - Retail operations example highlighting communication workflows and service coordination.
+- https://www.xmatters.com/customer/kellogg-how-to-cut-incident-resolution-times-by-80 - Example of operational automation reducing incident resolution times at enterprise scale.
+- https://www.xmatters.com/customer/accenture-solves-tough-challenges - Enterprise services example focused on workflow coordination and operational responsiveness.
+- https://www.xmatters.com/customer/american-airlines-stay-resilient-and-keep-customers-happy - Operational resilience example within large-scale transportation and customer service environments.
+
+## Pricing
+- https://www.xmatters.com/pricing - Pricing and packaging information for the xMatters platform and operational workflow automation capabilities.
+
+## Resources and Learning
+- https://www.xmatters.com/resources - Guides, reports, and educational materials on incident management, operational resilience, and DevOps practices.
+- https://www.xmatters.com/blog - Insights on incident response, workflow automation, observability, and operational excellence.
+- https://www.xmatters.com/comparisons - Product comparison resources for evaluating incident response, operational automation, and workflow orchestration platforms.
+
+## Company and Trust
+- https://www.xmatters.com/company - Company overview and background information for xMatters.
+- https://www.xmatters.com/company/partners - Partner ecosystem supporting integrations, operational workflows, and enterprise service delivery.
+- https://trust.everbridge.com/ - Trust center with security, compliance, privacy, and operational reliability information for Everbridge and xMatters.
+- https://support.xmatters.com/hc/en-us - Technical support, product documentation, and operational guidance for xMatters users and administrators.
+
+## Get Started
+- https://www.xmatters.com/p1/demo-request-general - Request a demo of the xMatters platform and operational workflow automation capabilities.
