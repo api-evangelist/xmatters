@@ -141,7 +141,7 @@ apis:
   humanURL: https://help.xmatters.com/xmapi/
   baseURL: https://{company}.xmatters.com/api/xm/1
   tags:
-  - OnCall
+  - On-Call
   tags_raw:
   - OnCall
   properties:
