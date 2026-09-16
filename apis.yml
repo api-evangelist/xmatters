@@ -135,18 +135,6 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/xmatters-integrations-api-openapi.yml
-- aid: xmatters:xmatters-oncall-api
-  name: xMatters OnCall API
-  description: The OnCall API from xMatters — 1 operation(s) for oncall.
-  humanURL: https://help.xmatters.com/xmapi/
-  baseURL: https://{company}.xmatters.com/api/xm/1
-  tags:
-  - On-Call
-  tags_raw:
-  - OnCall
-  properties:
-  - type: OpenAPI
-    url: openapi/xmatters-oncall-api-openapi.yml
 - aid: xmatters:xmatters-people-api
   name: xMatters People API
   description: The People API from xMatters — 4 operation(s) for people.
@@ -197,6 +185,16 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/xmatters-shifts-api-openapi.yml
+- aid: xmatters:xmatters-on-call-api
+  name: xMatters On Call API
+  description: The On Call API from xMatters — 1 operation(s) for on call.
+  humanURL: https://help.xmatters.com/xmapi/
+  baseURL: https://{company}.xmatters.com/api/xm/1
+  tags:
+  - On Call
+  properties:
+  - type: OpenAPI
+    url: openapi/xmatters-on-call-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/xmatters-agentic-access.yml
