@@ -191,6 +191,8 @@ apis:
   humanURL: https://help.xmatters.com/xmapi/
   baseURL: https://{company}.xmatters.com/api/xm/1
   tags:
+  - On-Call
+  tags_raw:
   - On Call
   properties:
   - type: OpenAPI
