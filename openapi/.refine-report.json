@@ -1,16 +1,7 @@
 {
   "provider": "xmatters",
   "sources": [
-    "xmatters-devices-api-openapi.yml",
-    "xmatters-events-api-openapi.yml",
-    "xmatters-groups-api-openapi.yml",
-    "xmatters-integrations-api-openapi.yml",
-    "xmatters-oncall-api-openapi.yml",
-    "xmatters-people-api-openapi.yml",
-    "xmatters-plans-api-openapi.yml",
-    "xmatters-scenarios-api-openapi.yml",
-    "xmatters-services-api-openapi.yml",
-    "xmatters-shifts-api-openapi.yml"
+    "_original/xmatters-openapi.yml"
   ],
   "outputs": [
     "xmatters-devices-api-openapi.yml",
@@ -24,9 +15,27 @@
     "xmatters-services-api-openapi.yml",
     "xmatters-shifts-api-openapi.yml"
   ],
-  "archived": [],
+  "archived": [
+    "deleted 1 superseded output(s) from the previous generation"
+  ],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "xmatters-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "superseded outputs removed: xmatters-on-call-api-openapi.yml",
+    "apis.yml register: written (+1 apis, 11 total)"
+  ],
+  "skipped": [
+    "xmatters-devices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-on-call-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-people-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-plans-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-scenarios-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-services-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "xmatters-shifts-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: xMatters REST Devices Events API
+  title: xMatters REST Events API
   version: '1.0'
   description: 'The xMatters REST API provides programmatic access to people, groups, on-call
 
@@ -8,9 +8,7 @@ info:
 
     reliability platform. Endpoints derived from the public xMatters REST API
 
-    documentation at help.xmatters.com/xmapi/.
-
-    '
+    documentation at help.xmatters.com/xmapi/.'
   contact:
     name: xMatters Documentation
     url: https://help.xmatters.com/xmapi/
