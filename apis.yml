@@ -42,7 +42,7 @@ tags:
   - Service Reliability
   - DevOps
   - Communications
-  - Workflow-Automation
+  - Workflow Automation
 tags_raw:
   - Incident Management
   - On-Call
@@ -51,6 +51,7 @@ tags_raw:
   - DevOps
   - Communication
   - Workflow Automation
+  - Workflow-Automation
 url: >-
   https://raw.githubusercontent.com/api-evangelist/xmatters/refs/heads/main/apis.yml
 created: '2026-05-11'
@@ -191,8 +192,6 @@ apis:
   humanURL: https://help.xmatters.com/xmapi/
   baseURL: https://{company}.xmatters.com/api/xm/1
   tags:
-  - On-Call
-  tags_raw:
   - On Call
   properties:
   - type: OpenAPI
