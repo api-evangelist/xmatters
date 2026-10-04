@@ -192,11 +192,16 @@ apis:
   humanURL: https://help.xmatters.com/xmapi/
   baseURL: https://{company}.xmatters.com/api/xm/1
   tags:
+  - On-Call
+  tags_raw:
   - On Call
   properties:
   - type: OpenAPI
     url: openapi/xmatters-on-call-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/xmatters-capability-edges.yml
+    name: xMatters Business Capability Map
   - type: AgenticAccess
     url: agentic-access/xmatters-agentic-access.yml
   - type: TrustCenter
