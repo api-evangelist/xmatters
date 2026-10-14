@@ -2,6 +2,7 @@ generated: '2026-10-14'
 method: searched
 checked:
 - https://marketplace.atlassian.com/
+- palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Atlassian Marketplace
@@ -19,5 +20,25 @@ edges:
   publisher_name: xMatters, an Everbridge Company
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: Palo Alto Networks (own)
+  partner: palo-alto-networks
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://cortex.marketplace.pan.dev/marketplace/details/XMatters/
+  mirror_of: palo-alto-networks/integrations/palo-alto-networks-integration-edges.yml
+  apps:
+  - xMatters
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: IT Services
+  badges:
+  - support:partner
+  - certification:certified
 source:
 - https://marketplace.atlassian.com/
