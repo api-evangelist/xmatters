@@ -1,14 +1,60 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/xmatters-openapi.yml
-docs: https://help.xmatters.com/ondemand/api/oauth.htm
-note: xMatters OAuth 2.0 (password and refresh_token grants) does not use scopes;
-  API access is governed by the authenticated user's roles and permissions
-  (https://help.xmatters.com/xmapi/).
+generated: '2026-10-14'
+method: none
+source: openapi/xmatters-devices-api-openapi.yml, openapi/xmatters-events-api-openapi.yml, openapi/xmatters-groups-api-openapi.yml,
+  openapi/xmatters-integrations-api-openapi.yml, openapi/xmatters-on-call-api-openapi.yml, openapi/xmatters-people-api-openapi.yml,
+  openapi/xmatters-plans-api-openapi.yml, openapi/xmatters-scenarios-api-openapi.yml, openapi/xmatters-services-api-openapi.yml,
+  openapi/xmatters-shifts-api-openapi.yml
 schemes:
 - name: OAuth2
-  source: openapi/xmatters-openapi.yml
+  source: openapi/xmatters-devices-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-events-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-groups-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-integrations-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-on-call-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-people-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-plans-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-scenarios-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-services-api-openapi.yml
+  flows:
+  - flow: password
+    tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
+- name: OAuth2
+  source: openapi/xmatters-shifts-api-openapi.yml
   flows:
   - flow: password
     tokenUrl: https://{company}.{deployment}.xmatters.com/api/xm/1/oauth2/token
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
